@@ -11,6 +11,10 @@ class Booklet {
   addNewBook = (bookList) => {
     const title = document.querySelector('.title').value;
     const author = document.querySelector('.author').value;
+    if ((title === '') || (author === '')) {
+      document.querySelector('.error').textContent = 'Please add book title and author name';
+      return false;
+    }
     const book = {
       title,
       author,
@@ -18,6 +22,24 @@ class Booklet {
     this.bookList.unshift(book);
     this.saveDataLocally(bookList);
     this.generateBooks();
+    document.querySelector('.title').value = '';
+    document.querySelector('.author').value = '';
+    document.querySelector('.add-books').style.display = 'none';
+    document.querySelector('.all-books').style.display = 'block';
+    return false;
+  };
+
+  removeErrorMessage = () => {
+    const title = document.querySelector('.title');
+    const author = document.querySelector('.author');
+
+    title.addEventListener('focus', () => {
+      document.querySelector('.error').textContent = '';
+    });
+    author.addEventListener('focus', () => {
+      document.querySelector('.error').textContent = '';
+    });
+    return false;
   };
 
   generateBooks = () => {
@@ -52,10 +74,8 @@ class Booklet {
 
     if (this.bookList.length === 0) {
       document.querySelector('.all-books').classList.add('hide');
-      document.querySelector('.horizontal-line1').classList.add('hide');
     } else {
       document.querySelector('.all-books').classList.remove('hide');
-      document.querySelector('.horizontal-line1').classList.remove('hide');
     }
   };
 
@@ -82,6 +102,10 @@ class Booklet {
 }
 
 const allBooks = new Booklet(document.querySelector('.listShow'));
-allBooks.generateBooks();
-allBooks.checkLocalStorage();
-allBooks.addListener();
+if (allBooks) {
+  allBooks.generateBooks();
+  allBooks.checkLocalStorage();
+  allBooks.addListener();
+}
+
+allBooks.removeErrorMessage();

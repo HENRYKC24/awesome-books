@@ -22,7 +22,7 @@ body {
 
 /* section: add book */
 .add-books {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
 }
@@ -61,6 +61,46 @@ body {
 .remove-button {
   border: solid black;
   box-shadow: 2px 2px black;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  border: solid black;
+  margin-top: 10px;
+  padding: 2vh 2vw;
+}
+
+.nav-items {
+  display: flex;
+  gap: 2vw;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: black;
+}
+
+.copyright {
+  border: solid black;
+  padding: 2vh 2vw;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.contact-info {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-date-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.error {
+  color: red;
 }
 
 @media screen and (min-width: 768px) {
