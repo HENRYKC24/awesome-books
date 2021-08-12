@@ -1,57 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Awesome Books</title>
     <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
     <script src="./js/time.js" defer></script>
     <script src="./index.js" defer></script>
     <script src="./js/navigation.js" defer></script>
-</head>
-<body>
-    <div class="wrapper"></div>
-    <header>
-        <nav class="nav">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top">
+        <header>
+          <nav class="nav">
             <span class="nav-title">Awesome Books</span>
             <div class="nav-items">
-                <a class="list" href="#">List</a>|
-                <a class="add-new" href="#">Add new</a>|
-                <a class="contact" href="#">Contact</a>
+              <a class="list" href="#">List</a>|
+              <a class="add-new" href="#">Add new</a>|
+              <a class="contact" href="#">Contact</a>
             </div>
-        </nav>
-        <div class="time-date-container">
+          </nav>
+          <div class="time-date-container">
             <span class="time-date"></span>
-        </div>
-    </header>
-    <main>
-        <section class="all-books">
+          </div>
+        </header>
+        <main>
+          <section class="all-books">
             <h1>All Awesome Books</h1>
             <div class="listShow"></div>
-        </section>
-        <section class="add-books">
+          </section>
+          <section class="add-books">
             <h1>Add A New Book</h1>
             <form class="input-book">
-                <input type="text" class="title" placeholder="title" required>
-                <input type="text" class="author" placeholder="author" required>
-                <span class="error"></span>
-                <button type="button" class="add">Add</button>
+              <input type="text" class="title" placeholder="title" required />
+              <input type="text" class="author" placeholder="author" required />
+              <span class="error"></span>
+              <button type="button" class="add">Add</button>
             </form>
-        </section>
-        <section class="contact-info">
+          </section>
+          <section class="contact-info">
             <h1>Contact information</h1>
-            <p>Do you have any questions or you just want to say "Hello"?<br>You can reach out to us</p>
+            <p>
+              Do you have any questions or you just want to say "Hello"?<br />You
+              can reach out to us
+            </p>
             <ul>
-                <li>Our e-mail mail@mail.com</li>
-                <li>Our phone number: 00421987564123</li>
-                <li>Our address: Streetname 06,19921 City, Country</li>
+              <li>Our e-mail mail@mail.com</li>
+              <li>Our phone number: 00421987564123</li>
+              <li>Our address: Streetname 06,19921 City, Country</li>
             </ul>
-        </section>
-    </main>
-    <footer class="copyright">
-        <span class="copyright-text">Copyright &copy; 2021 henry-kc, aliabbani</span>
-    </footer>
-</body>
+          </section>
+        </main>
+      </div>
+      <footer class="copyright">
+        <span class="copyright-text"
+          >Copyright &copy; 2021 henry-kc, aliabbani</span
+        >
+      </footer>
+    </div>
+  </body>
 </html>
