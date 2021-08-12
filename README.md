@@ -16,7 +16,7 @@ This is a Todo-like book management app to showcase the skills we have acquired 
 
 ## Live Demo
 
-[Live Demo Link](https://stoic-fermat-ddc346.netlify.app/)
+[Live Demo Link](https://youthful-booth-4c3e84.netlify.app/#)
 
 
 ## Getting Started
