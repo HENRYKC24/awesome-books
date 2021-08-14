@@ -16,7 +16,7 @@ This is a Todo-like book management app to showcase the skills we have acquired 
 
 ## Live Demo
 
-[Live Demo Link](https://youthful-booth-4c3e84.netlify.app/#)
+[Live Demo Link](https://blissful-swirles-fd1633.netlify.app/#)
 
 
 ## Getting Started
@@ -24,7 +24,7 @@ This is a Todo-like book management app to showcase the skills we have acquired 
 
 To get a local copy up and running follow these simple example steps.
 
-Clone the repo with `git clone https://github.com/HENRYKC24/my-portfolio.git`
+Clone the repo with `git clone https://github.com/HENRYKC24/awesome-books.git`
 
 Run `npm install` from the command line
 
