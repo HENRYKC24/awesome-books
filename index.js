@@ -26,6 +26,9 @@ class Booklet {
     document.querySelector('.author').value = '';
     document.querySelector('.add-books').style.display = 'none';
     document.querySelector('.all-books').style.display = 'block';
+    document.querySelector('.list').style.color = '#fff';
+    document.querySelector('.add-new').style.color = 'rgb(49, 210, 231)';
+    document.querySelector('.contact').style.color = 'rgb(49, 210, 231)';
     return false;
   };
 
@@ -52,12 +55,12 @@ class Booklet {
 
       const titleSpan = document.createElement('span');
       titleSpan.className = 'book-title';
-      titleSpan.textContent = `"${bookObject.title}" by ${bookObject.author}`;
+      titleSpan.innerHTML = `"${bookObject.title}" <span class="slant">by</span> ${bookObject.author}`;
       div.appendChild(titleSpan);
 
       const removeButton = document.createElement('button');
       removeButton.className = 'remove-button';
-      removeButton.textContent = 'Remove';
+      removeButton.textContent = 'Delete';
       removeButton.addEventListener('click', () => {
         this.removeBook(index);
         this.saveDataLocally(this.bookList);
@@ -67,15 +70,17 @@ class Booklet {
       div.appendChild(removeButton);
       parentElement.appendChild(div);
 
-      if (index % 2 !== 0) {
+      if (index % 2 === 0) {
         div.classList.add('grey-background');
+      } else {
+        div.classList.add('toma');
       }
     });
 
     if (this.bookList.length === 0) {
-      document.querySelector('.all-books').classList.add('hide');
+      document.querySelector('.no-book').classList.remove('hide');
     } else {
-      document.querySelector('.all-books').classList.remove('hide');
+      document.querySelector('.no-book').classList.add('hide');
     }
   };
 
