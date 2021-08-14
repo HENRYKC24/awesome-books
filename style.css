@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  padding: 1vw;
   font-family: sans-serif;
 }
 
@@ -17,8 +16,8 @@ body {
 }
 
 .listShow {
-  border: 3px solid black;
   display: flex;
+  padding: 2vh 2vw;
   flex-direction: column;
   margin: 0;
 }
@@ -38,7 +37,14 @@ body {
 .input-book {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2vh;
+}
+
+.no-book {
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 .title,
@@ -48,11 +54,27 @@ body {
 }
 
 .add {
-  align-self: flex-end;
+  align-self: center;
+  width: 150px;
+  padding: 5px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(49, 210, 231);
+  color: #fff;
+}
+
+.add:hover {
+  cursor: pointer;
+  background-color: rgb(24, 173, 24);
 }
 
 .grey-background {
   background-color: #ddd;
+}
+
+.toma {
+  background-color: rgb(242, 247, 246);
 }
 
 .hide {
@@ -64,36 +86,80 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 2vh 2vw;
+  font-size: 1.3rem;
 }
 
 .remove-button {
-  border: solid black;
-  box-shadow: 2px 2px black;
+  border: none;
+  padding: 10px;
+  background-color: rgb(243, 59, 26);
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.remove-button:hover {
+  cursor: pointer;
+  background-color: tomato;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
-  border: solid black;
-  margin-top: 10px;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  background-color: teal;
+  font-size: 1rem;
   padding: 2vh 2vw;
+  box-shadow: 0 2px 5px rgb(141, 221, 134);
+}
+
+.nav-title {
+  color: rgb(253, 251, 251);
+}
+
+.heading {
+  color: rgb(49, 210, 231);
+}
+
+.contact-intro {
+  text-align: justify;
+  margin: 0;
+  padding: 0 2vw;
 }
 
 .nav-items {
   display: flex;
+  align-items: center;
   gap: 2vw;
 }
 
 .nav-items a {
   text-decoration: none;
-  color: black;
+  font-size: 1rem;
+}
+
+.nav-items a:not(:first-child) {
+  color: rgb(49, 210, 231);
+}
+
+.list {
+  color: #fff;
 }
 
 .copyright {
-  border: solid black;
+  background-color: teal;
+  color: #fff;
   padding: 2vh 2vw;
   font-weight: 700;
   margin-top: 10px;
+  text-align: center;
+}
+
+.slant {
+  font-style: italic;
+  color: teal;
 }
 
 .contact-info {
@@ -105,6 +171,7 @@ body {
 .time-date-container {
   display: flex;
   justify-content: flex-end;
+  padding: 2vh 2vw;
 }
 
 .error {
@@ -117,7 +184,7 @@ body {
     width: 30vw;
   }
 
-  body {
-    padding: 0 5vw;
+  .nav {
+    font-size: 1.5rem;
   }
 }
