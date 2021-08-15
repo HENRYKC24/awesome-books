@@ -45,12 +45,18 @@ body {
 .no-book {
   text-align: center;
   font-size: 1.5rem;
+  line-height: 2;
 }
 
 .title,
 .author {
-  width: 60vw;
-  height: 25px;
+  display: block;
+  width: 330px;
+  height: 30px;
+  padding: 3px;
+  border: 2px solid grey;
+  font-size: 1.5rem;
+  border-radius: 5px;
 }
 
 .add {
@@ -58,6 +64,7 @@ body {
   width: 150px;
   padding: 5px;
   font-size: 1.2rem;
+  font-weight: bold;
   border: none;
   border-radius: 5px;
   background-color: rgb(49, 210, 231);
@@ -112,7 +119,10 @@ body {
   background-color: teal;
   font-size: 1rem;
   padding: 2vh 2vw;
-  box-shadow: 0 2px 5px rgb(141, 221, 134);
+  box-shadow: 0 3px 10px  rgb(221, 207, 207);
+  position: sticky !important;
+  position: -webkit-sticky;
+  top: 0;
 }
 
 .nav-title {
@@ -181,7 +191,7 @@ body {
 @media screen and (min-width: 768px) {
   .title,
   .author {
-    width: 30vw;
+    width: 40vw;
   }
 
   .nav {
